@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pexels New Tab Setup</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    button {
+      background: #05a081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    button:hover {
+      background: #048669;
+    }
+    
+    .error {
+      color: #dc3545;
+      margin-top: 8px;
+      display: none;
+    }
+    
+    .form-group + .form-group {
+      margin-top: 2rem;
+    }
+    
+    .hint {
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    
+    .checkbox-group {
+      margin-top: 0.5rem;
+    }
+    
+    .checkbox-group label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .checkbox-group input[type="checkbox"] {
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pexels New Tab Setup</h1>
+  <p>To use this extension, you need to provide your Pexels API key. You can get one for free at <a href="https://www.pexels.com/api/" target="_blank">https://www.pexels.com/api/</a></p>
+  
+  <div class="form-group">
+    <label for="apiKey">Pexels API Key:</label>
+    <input type="text" id="apiKey" placeholder="Enter your API key">
+    <div id="error" class="error">Please enter a valid API key</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="searchTerm">Image Search Term (optional):</label>
+    <input type="text" id="searchTerm" placeholder="E.g., nature, architecture, etc.">
+    <div class="hint">Leave empty to use Pexels curated photos</div>
+  </div>
+
+  <div class="form-group">
+    <label for="greeting">Greeting Message (optional):</label>
+    <input type="text" id="greeting" placeholder="E.g., Hello, Welcome, Good day">
+    <div class="hint">Will be displayed above the clock</div>
+  </div>
+
+  <div class="form-group">
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" id="use24Hour">
+        Use 24-hour time format
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" id="showQuote">
+        Show Quote of the Day
+      </label>
+    </div>
+  </div>
+  
+  <button id="saveButton">Save Settings</button>
+  
+  <script src="setup.js"></script>
+</body>
+</html> 

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Pexels New Tab",
+  "version": "1.0",
+  "description": "Beautiful Pexels images and clock on your new tab page",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://api.pexels.com/*"
+  ],
+  "action": {
+    "default_title": "Configure Pexels New Tab"
+  },
+  "options_page": "setup.html"
+} 

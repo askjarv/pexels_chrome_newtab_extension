@@ -1,0 +1,11 @@
+pexels-new-tab/
+  ├── manifest.json
+  ├── newtab.html
+  ├── newtab.css
+  ├── newtab.js
+  ├── background.js
+  └── icons/
+      ├── icon16.png
+      ├── icon32.png
+      ├── icon48.png
+      └── icon128.png 
